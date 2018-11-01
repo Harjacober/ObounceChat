@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".authentication.UserExtraInfoActivity">
+
+    <ProgressBar
+        android:id="@+id/load-indicator"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="invisible"
+        style="@android:style/Widget.ProgressBar.Horizontal"
+        android:indeterminate="true"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="30sp"
+        android:text="Saving..."
+        android:visibility="invisible"
+        android:id="@+id/tv_saving"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"/>
+    <LinearLayout
+        android:id="@+id/linear_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="One more step to go"
+            android:textSize="22sp"
+            android:layout_gravity="center"
+            android:layout_marginBottom="32dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="We need your full name so your friends can better identify you"
+            android:textSize="18sp"
+            android:padding="16dp"/>
+        <EditText
+            android:id="@+id/edt_fullname"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Full Name"
+            android:layout_margin="8dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="And a brief description about yourself"
+            android:padding="16dp"
+            android:textSize="18sp"/>
+        <EditText
+            android:id="@+id/edt_self_desc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter here"
+            android:layout_margin="8dp"/>
+    </LinearLayout>
+</RelativeLayout>

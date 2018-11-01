@@ -1,6 +1,8 @@
 package com.example.harjacober.obouncechat.viewmodel;
 
+import android.app.Application;
 import android.arch.core.util.Function;
+import android.arch.lifecycle.AndroidViewModel;
 import android.arch.lifecycle.LiveData;
 import android.arch.lifecycle.Transformations;
 import android.arch.lifecycle.ViewModel;
@@ -18,19 +20,25 @@ import com.google.firebase.database.FirebaseDatabase;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ChatsViewModel extends ViewModel {
+public class ChatsViewModel extends AndroidViewModel {
     private FirebaseUser mUser =
             FirebaseAuth.getInstance().getCurrentUser();
+    //TODO usimg application context in a view model is nit advisable, fix this using dagger2 later
     private DatabaseReference reference =
             FirebaseDatabase.getInstance().getReference()
             .child("chats").child(
                     chatId(mUser.getUid(), SharedPreferenceUtils
-                            .retrieveCurrentFriendId())
+                            .retrieveCurrentFriendId(getApplication()))
             );
     FirebaseQueryLiveData liveData =
             new FirebaseQueryLiveData(reference);
     private LiveData<List<Message>> listLiveData =
             Transformations.map(liveData, new Deserializer());
+
+    public ChatsViewModel(@NonNull Application application) {
+        super(application);
+    }
+
     private class Deserializer implements Function<DataSnapshot, List<Message>>{
 
         @Override

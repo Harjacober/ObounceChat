@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "79563027751",
+    "firebase_url": "https://obouncechat.firebaseio.com",
+    "project_id": "obouncechat",
+    "storage_bucket": "obouncechat.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:79563027751:android:8dc2ff7c14b73e27",
+        "android_client_info": {
+          "package_name": "com.example.harjacober.obouncechat"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "79563027751-52nm9b6n1kp8rtjt0m67jhcfvvp71v4p.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.harjacober.obouncechat",
+            "certificate_hash": "9607b87eebebafa959e91dbe6b937ab612322ce6"
+          }
+        },
+        {
+          "client_id": "79563027751-of8nr5s4jgucddhavvqlrvqsjtu0nonm.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCRCfTerbmMm9JKl1bTDO5H1ak8xYES89U"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "79563027751-of8nr5s4jgucddhavvqlrvqsjtu0nonm.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
